@@ -2,12 +2,13 @@ import React from 'react';
 import './header.css'
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import logo from '../../img/logo.png'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Navbar className='navbar fixed-top' collapseOnSelect expand="lg">
+        <Navbar className='navbar sticky-top header' collapseOnSelect expand="lg">
             <Container>
-                <Navbar.Brand href="#home"><img height={'150px'} src={logo} alt="" /></Navbar.Brand>
+                <Navbar.Brand href="#home"><img height={'80px'} src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -17,9 +18,7 @@ const Header = () => {
                     </Nav>
                     <Nav>
                         <Nav.Link className='text-dark' href="#deets">More deets</Nav.Link>
-                        <Nav.Link className='text-dark' eventKey={2} href="#memes">
-                            Dank
-                        </Nav.Link>
+                        <Nav.Link className='text-dark' as={Link} to="login"> Login</Nav.Link>
                         <NavDropdown className='text-dark' id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">About Us</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another </NavDropdown.Item>
@@ -30,7 +29,7 @@ const Header = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
     );
 };
 

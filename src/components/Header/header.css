@@ -1,4 +1,3 @@
-.navbar {
-    background-color: transparent;
-
+.header {
+    background-image: linear-gradient(rgba(244, 249, 249, 0.708), rgba(190, 221, 234, 0.658));
 }
