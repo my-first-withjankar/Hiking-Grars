@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import background from '../../img/registerbg.jpg';
 import logo from '../../img/logo.png'
+import Social from '../Social/Social';
 
 const Register = () => {
     return (
@@ -28,12 +29,13 @@ const Register = () => {
                     <div class="form-group mb-3">
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
                     </div>
-                    <div class="form-group mb-1">
+                    <div class="form-group mb-3">
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password" />
                     </div>
-                    <small className='mb-2 d-block text-start'>Forgot Password?</small>
-                    <button type="submit" class="btn btn-primary w-50">Sign Up</button>
-                    <small className='d-block text-start'>Not A Member?<Link to='/register'> Sign Up</Link></small>
+                    <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                    <p className='my-2'>or</p>
+                    <Social></Social>
+                    <small className='d-block text-start mt-2 mb-3'>Already in Hikeventures?<Link to='/login'> Log in</Link></small>
                 </form>
             </div>
         </div >

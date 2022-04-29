@@ -13,6 +13,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home />}></Route>
+        <Route path='/home' element={<Home />}></Route>
         <Route path='/adduser' element={<AddUser></AddUser>}></Route>
         <Route path='/inventory' element={<Inventory />}></Route>
         <Route path='/register' element={<Register />}></Route>
