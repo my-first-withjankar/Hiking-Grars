@@ -1,12 +1,14 @@
 import React from 'react';
-import Banner from '../Banner/Banner';
+import Carousell from '../Carousel/Carousel';
 import Inventory from '../Inventory/Inventory';
+import Partners from '../Partners/Partners';
 import Space from '../Space/Space';
 
 const Home = () => {
     return (
         <div>
-            <Banner />
+            <Carousell />
+            <Partners></Partners>
             <Space></Space>
             <Inventory></Inventory>
         </div>
