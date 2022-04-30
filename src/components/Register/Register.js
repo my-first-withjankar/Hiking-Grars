@@ -1,10 +1,58 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import background from '../../img/registerbg.jpg';
 import logo from '../../img/logo.png'
 import Social from '../Social/Social';
+import auth from '../../firebase.init';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 const Register = () => {
+    const navigate = useNavigate()
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    if (user) {
+        navigate('/')
+        console.log(user);
+    }
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return (
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
+
+    const handleSignUp = (event) => {
+        event.preventDefault()
+
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        const confirmPassword = event.target.confirmPassword.value;
+
+        console.log(name, email, password, confirmPassword);
+
+        if (password === confirmPassword) {
+            createUserWithEmailAndPassword(email, password)
+        }
+        else {
+            return alert('password did not matched')
+        }
+
+
+
+    }
+
+
     return (
         <div
             style=
@@ -19,18 +67,18 @@ const Register = () => {
 
             <div className='w-50 mx-auto bg-white'>
                 <img className='mt-3' height={'80px'} src={logo} alt="" />
-                <form className='w-50 mx-auto'>
+                <form onSubmit={handleSignUp} className='w-50 mx-auto'>
                     <div class="form-group my-3">
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Name" />
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='name' placeholder="Your Name" required />
                     </div>
                     <div class="form-group my-3">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='email' placeholder="Enter email" required />
                     </div>
                     <div class="form-group mb-3">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                        <input type="password" class="form-control" name='password' id="exampleInputPassword1" placeholder="Password" required />
                     </div>
                     <div class="form-group mb-3">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password" />
+                        <input type="password" class="form-control" name='confirmPassword' id="exampleInputPassword1" placeholder="Confirm Password" required />
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Create Account</button>
                     <p className='my-2'>or</p>
@@ -42,4 +90,4 @@ const Register = () => {
     );
 };
 
-export default Register; <h1>Register</h1>
+export default Register; 

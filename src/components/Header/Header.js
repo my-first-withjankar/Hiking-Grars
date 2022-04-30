@@ -3,8 +3,16 @@ import './header.css'
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import logo from '../../img/logo.png'
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
+
 
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const logOut = () => {
+        signOut(auth)
+    }
     return (
         <Navbar className='navbar sticky-top header' collapseOnSelect expand="lg">
             <Container>
@@ -22,8 +30,15 @@ const Header = () => {
                     </Nav>
                     <Nav>
                         <Nav.Link className='text-dark' href="#deets">More deets</Nav.Link>
-                        <Nav.Link className='text-dark' as={Link} to="login"> Login</Nav.Link>
+                        <Nav.Link className='text-dark' as={Link} to="/register"> Register</Nav.Link>
+                        {
+                            user
+                                ?
+                                <Nav.Link onClick={logOut} className='text-dark' as={Link} to="/"> Sign Out</Nav.Link>
+                                :
+                                <Nav.Link className='text-dark' as={Link} to="login"> Login</Nav.Link>
 
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Container>
