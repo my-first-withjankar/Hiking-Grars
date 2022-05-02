@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Carousell from '../Carousel/Carousel';
 import Footer from '../Footer/Footer';
 import Inventory from '../Inventory/Inventory';
@@ -12,6 +13,7 @@ const Home = () => {
             <Partners></Partners>
             <Space></Space>
             <Inventory></Inventory>
+            <Link to='/manage'>Manage Inventory</Link>
             <Footer></Footer>
         </div>
     );

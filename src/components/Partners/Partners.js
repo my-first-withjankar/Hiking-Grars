@@ -1,4 +1,5 @@
 import React from 'react';
+import './partner.css'
 import img1 from '../../img/partners/osprey.svg'
 import img2 from '../../img/partners/danner.svg'
 import img3 from '../../img/partners/dometic.svg'

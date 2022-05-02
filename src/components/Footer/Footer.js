@@ -23,10 +23,10 @@ const Footer = () => {
                 }}
                 className='mt-5 container'
             >
-                <div className="row text-white">
+                <div className="row text-white container">
 
 
-                    <div className='col-md-3 my-5 ms-5'>
+                    <div className='col-md-4 my-5'>
                         <h4 className='mb-3 text-start'>Contact Us</h4>
                         <div className='text-start'>
                             <p className='my-1'><HomeIcon className="font-size text-blue-500" />
@@ -46,12 +46,12 @@ const Footer = () => {
 
 
 
-                    <div className='col-md-3 my-5'>
+                    <div className='col-md-4 my-5'>
                         <h4 className='text-start'>Links</h4>
                     </div>
 
 
-                    <div className='col-md-3 my-5 text-start'>
+                    <div className='col-md-4 my-5 text-start'>
                         <h4 className='mb-3'>Connect</h4>
                         <div>
                             <img className='social-icon me-4 mt-2 mb-4' src={instagram} alt="" />
@@ -67,7 +67,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='my-3'>
-                <p><span>&copy;</span> {year} Hikeventures all right Reserved</p>
+                <small><span>&copy;</span> {year} Hikeventures all right Reserved</small>
             </div>
         </>
     );

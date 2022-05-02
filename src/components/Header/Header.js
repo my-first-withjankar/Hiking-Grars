@@ -20,7 +20,7 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link className='text-dark' as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link className='text-dark' as={Link} to="/">Home</Nav.Link>
                         <Nav.Link className='text-dark' href="#pricing">Pricing</Nav.Link>
                         <NavDropdown className='text-dark' title='Pages' id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">About Us</NavDropdown.Item>
@@ -29,7 +29,7 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link className='text-dark' href="#deets">More deets</Nav.Link>
+                        <Nav.Link className='text-dark' as={Link} to="adduser">Add User</Nav.Link>
                         <Nav.Link className='text-dark' as={Link} to="/register"> Register</Nav.Link>
                         {
                             user

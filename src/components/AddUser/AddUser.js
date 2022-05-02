@@ -11,7 +11,7 @@ const AddUser = () => {
         const price = event.target.price.value;
         console.log(name, price);
 
-        fetch('http://localhost:5000/adduser', {
+        fetch('http://localhost:5000/products', {
             method: 'POST',
             body: JSON.stringify({
                 name, price

@@ -68,19 +68,19 @@ const Register = () => {
             <div className='w-50 mx-auto bg-white'>
                 <img className='mt-3' height={'80px'} src={logo} alt="" />
                 <form onSubmit={handleSignUp} className='w-50 mx-auto'>
-                    <div class="form-group my-3">
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='name' placeholder="Your Name" required />
+                    <div className="form-group my-3">
+                        <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='name' placeholder="Your Name" required />
                     </div>
-                    <div class="form-group my-3">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='email' placeholder="Enter email" required />
+                    <div className="form-group my-3">
+                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='email' placeholder="Enter email" required />
                     </div>
-                    <div class="form-group mb-3">
-                        <input type="password" class="form-control" name='password' id="exampleInputPassword1" placeholder="Password" required />
+                    <div className="form-group mb-3">
+                        <input type="password" className="form-control" name='password' id="exampleInputPassword1" placeholder="Password" required />
                     </div>
-                    <div class="form-group mb-3">
-                        <input type="password" class="form-control" name='confirmPassword' id="exampleInputPassword1" placeholder="Confirm Password" required />
+                    <div className="form-group mb-3">
+                        <input type="password" className="form-control" name='confirmPassword' id="exampleInputPassword1" placeholder="Confirm Password" required />
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                    <button type="submit" className="btn btn-primary w-100">Create Account</button>
                     <p className='my-2'>or</p>
                     <Social></Social>
                     <small className='d-block text-start mt-2 mb-3'>Already in Hikeventures?<Link to='/login'> Log in</Link></small>
