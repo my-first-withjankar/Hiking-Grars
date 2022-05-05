@@ -5,6 +5,9 @@ import Footer from '../Footer/Footer';
 import Inventory from '../Inventory/Inventory';
 import Partners from '../Partners/Partners';
 import Space from '../Space/Space';
+import { ArrowSmRightIcon } from '@heroicons/react/solid'
+import './Home.css'
+import Extra1 from '../extra/Extra1/Extra1';
 
 const Home = () => {
     return (
@@ -13,7 +16,13 @@ const Home = () => {
             <Partners></Partners>
             <Space></Space>
             <Inventory></Inventory>
-            <Link to='/manage'>Manage Inventory</Link>
+            <div className='inventory container text-end '>
+                <Link
+                    to='/manage'>Manage Inventory
+                    <ArrowSmRightIcon className="font-size text-blue-500 ms-1" />
+                </Link>
+            </div>
+            <Extra1></Extra1>
             <Footer></Footer>
         </div>
     );

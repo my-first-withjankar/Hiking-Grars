@@ -16,57 +16,65 @@ const Footer = () => {
         <>
             <div style=
                 {{
-                    backgroundColor: '#22577A',
-                    marginLeft: '15%',
-                    marginRight: '0px'
+                    backgroundColor: '#347fb1de',
 
                 }}
-                className='mt-5 container'
+                className='mt-5 '
             >
                 <div className="row text-white container">
-
-
-                    <div className='col-md-4 my-5'>
-                        <h4 className='mb-3 text-start'>Contact Us</h4>
-                        <div className='text-start'>
-                            <p className='my-1'><HomeIcon className="font-size text-blue-500" />
-                                No: 58 A, East Madison Street,</p>
-                            <p className='my-1 ms-4'>Baltimore, MD, USA 4508</p>
-                            <p className='my-1'>
-                                <PhoneIcon className="font-size text-blue-500" />
-                                01825-343708</p>
-                            <p className='my-1'>
-                                <ClockIcon className="font-size text-blue-500" />
-                                9.30AM - 7.30PM</p>
-                            <p className='my-1'>
-                                <MailIcon className="font-size text-blue-500" />
-                                avirus170@gmail.com</p>
+                    <div className='col-md-4 my-5 '>
+                        <div className='d-flex justify-content-end'>
+                            <div>
+                                <h4 className='mb-3 text-start'>Contact Us</h4>
+                                <div className='text-start'>
+                                    <p className='my-1'><HomeIcon className="font-size text-blue-500" />
+                                        No: 58 A, East Madison Street,</p>
+                                    <p className='my-1 ms-4'>Baltimore, MD, USA 4508</p>
+                                    <p className='my-1'>
+                                        <PhoneIcon className="font-size text-blue-500" />
+                                        01825-343708</p>
+                                    <p className='my-1'>
+                                        <ClockIcon className="font-size text-blue-500" />
+                                        9.30AM - 7.30PM</p>
+                                    <p className='my-1'>
+                                        <MailIcon className="font-size text-blue-500" />
+                                        avirus170@gmail.com</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
 
 
                     <div className='col-md-4 my-5'>
-                        <h4 className='text-start'>Links</h4>
+                        <div className="d-flex justify-content-center">
+                            <h4 className='text-start'>Links</h4>
+                        </div>
                     </div>
 
 
                     <div className='col-md-4 my-5 text-start'>
-                        <h4 className='mb-3'>Connect</h4>
-                        <div>
-                            <img className='social-icon me-4 mt-2 mb-4' src={instagram} alt="" />
-                            <img className='social-icon me-4 mt-2 mb-4' src={twitter} alt="" />
-                            <img className='social-icon me-4 mt-2 mb-4' src={facebook} alt="" />
-                        </div>
-                        <div>
-                            <img className='social-icon me-4' src={youtube} alt="" />
-                            <img className='social-icon me-4' src={linkedin} alt="" />
-                            <img className='social-icon me-4' src={whatsapp} alt="" />
+                        <div className='d-flex justify-content-end'>
+                            <div>
+                                <h4 className='mb-4'>Connect</h4>
+                                <div>
+                                    <img className='social-icon me-4 mt-2 mb-4' src={instagram} alt="" />
+                                    <img className='social-icon me-4 mt-2 mb-4' src={twitter} alt="" />
+                                    <img className='social-icon me-4 mt-2 mb-4' src={facebook} alt="" />
+                                </div>
+                                <div>
+                                    <img className='social-icon me-4' src={youtube} alt="" />
+                                    <img className='social-icon me-4' src={linkedin} alt="" />
+                                    <img className='social-icon me-4' src={whatsapp} alt="" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='my-3'>
+            <div className=' text-center text-white py-3    '
+                style={{ backgroundColor: 'rgb(5, 51, 83)' }}
+            >
                 <small><span>&copy;</span> {year} Hikeventures all right Reserved</small>
             </div>
         </>

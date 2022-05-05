@@ -1,84 +1,56 @@
 [
   {
-    "id": "e912ad01-2551-48dc-a709-4054cbfbcbbc",
-    "category": "Bottle",
-    "name": "Stormbreak 2",
+    "name": "Marmot x Pendleton Tungsten 2P",
     "seller": "The North Face",
     "price": 243,
     "description": "The Stormbreak 2 is The North Face's classic two-person camping tent. Featuring large doors for easy access and amazing views of the great outdoors, this is a tent for making outdoor memories.",
     "stock": 119,
     "ratings": 4,
-    "ratingsCount": 64,
-    "img": "https://i.ibb.co/B6058my/product3.jpg",
-    "shipping": 43,
-    "quantity": 0
+    "img": "https://i.ibb.co/B6058my/product3.jpg"
   },
   {
-    "id": "afc5d640-9943-437a-b644-ba1f6f12baa9",
-    "category": "Bottle",
     "name": "Katana Lace (Fall 2021)",
-    "seller": "La Sportiva",
+    "seller": "Adidas",
     "price": 149,
     "description": "The La Sportiva men's TX Guide is a super-technical approach shoe built for speed, comfort and performance. With the cushion and profile of a mountain running shoe combined with the lacing and sole of an approach shoe, this innovative design will be ideal for climbers, guides and any mountain enthusiast looking for the ultimate performance with support, climbability and durability.",
-    "stock": 10,
+    "stock": 110,
     "ratings": 3,
-    "ratingsCount": 15,
-    "img": "https://i.ibb.co/f1g9vMd/product2.jpg",
-    "shipping": 46,
-    "quantity": 0
+    "img": "https://i.ibb.co/f1g9vMd/product2.jpg"
   },
   {
-    "id": "5b5c43d9-950d-4b9a-b7d9-ca489224a7b2",
-    "category": "Bottle",
-    "name": "Alpine Apll-5F",
-    "seller": "Sea to Summit",
+    "name": "Camp Robber Bedroll - Doublewide",
+    "seller": "The North Face",
     "price": 649,
     "description": "Flylow built the insulated Snowman Bib for the guy who wants extra-warm, insulated pants—in bib form. We promise you won’t look or feel like a doughboy. The thin,40-gram layer of insulation is undetectable from the outside and won’t make you overheat. The exterior is tough Stark 2-layer hardshell. Like Flylow's other favorite bib pants, you’ll get long side zips for easy venting, ample pockets for storage, and waterproof, made-to-last outer fabric.",
-    "stock": 20,
+    "stock": 220,
     "ratings": 5,
-    "ratingsCount": 83,
-    "img": "https://i.ibb.co/Fk12r9c/product5.jpg",
-    "shipping": 6,
-    "quantity": 0
+    "img": "https://i.ibb.co/Fk12r9c/product5.jpg"
   },
   {
-    "id": "96239c09-8b1c-4c81-99f9-f43e7613eab3",
     "name": "Wilderness Snowshoes",
-    "seller": "Tubbs",
+    "seller": "Adidas",
     "price": 39,
     "description": "Durable four season hiking pole with improved stiffness Black Diamond's durable, four-season, carbon trekking pole now has improved joint support and increased durability, making the Alpine Carbon Z-Pole a strong yet ultralight pole for mountain missions.",
-    "stock": 20,
+    "stock": 250,
     "ratings": 3,
-    "ratingsCount": 1,
-    "img": "https://i.ibb.co/gjWC1G2/product6.jpg",
-    "shipping": 5,
-    "quantity": 0
+    "img": "https://i.ibb.co/gjWC1G2/product6.jpg"
   },
   {
-    "id": "30698483-f7aa-49ba-9de9-9070f64dc263",
-    "name": "Apex 60",
-    "seller": "Mountainsmith",
+    "name": "Archeon 45 - Women's (Fall 2021)",
+    "seller": "Osprey",
     "price": 449,
     "description": "Meet the pack that does it all. The Sierra Designs Flex Capacitor 25-40 features adjustable volume to handle both short and long hauls, and a Y flex suspension system that carries above its weight class. A bucket lid with a stash pocket closes everything up, while dual stretch pockets on the shoulder straps and side of pack cover shove it needs.",
-    "stock": 11,
+    "stock": 511,
     "ratings": 5,
-    "ratingsCount": 35,
-    "img": "https://i.ibb.co/3rmg9Gr/product1.jpg",
-    "shipping": 5,
-    "quantity": 0
+    "img": "https://i.ibb.co/3rmg9Gr/product1.jpg"
   },
   {
-    "id": "02871edc-272b-4e20-bcc2-b32681213b3c",
-    "category": "Bottle",
     "name": "Steel Metal Bottle 2L",
-    "seller": "Addidas",
+    "seller": "Adidas",
     "price": 50,
     "description": "The ultralight Titanium Para-Bottle from Vargo is a completely biocompatible 1 liter water bottle which won't leach or corrode, and works with common water filters. It features 7 feet of integrated replaceable 550 paracord, individually machined decagon shaped lid, and pure titanium construction. When you find yourself in over your head, unwind the 7 foot paracord carry loop and pull yourself out to safety, improvise fishing line, make a bow drill, splint your broken tent pole, or your leg. It'll be there when you need it most.",
-    "stock": 14,
+    "stock": 654,
     "ratings": 4,
-    "ratingsCount": 68,
-    "img": "https://i.ibb.co/GV2dCZC/product4.jpg",
-    "shipping": 27,
-    "quantity": 0
+    "img": "https://i.ibb.co/GV2dCZC/product4.jpg"
   }
 ]

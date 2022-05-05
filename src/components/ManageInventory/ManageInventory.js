@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { TrashIcon } from '@heroicons/react/solid'
+
 
 const ManageInventory = () => {
     const [products, setProducts] = useState([]);
@@ -12,8 +14,8 @@ const ManageInventory = () => {
     }, [])
 
     const handleDelete = (id) => {
-        const procceed = window.confirm('are you sure you want to delete');
-        if (procceed) {
+        const proceed = window.confirm('are you sure you want to delete');
+        if (proceed) {
             console.log(id);
             const url = `http://localhost:5000/product/${id}`;
             fetch(url, {
@@ -30,14 +32,61 @@ const ManageInventory = () => {
         }
     }
     return (
-        <div className='container'>
-            <div className="row gy-5">
+        <div
+            className='container mt-3'>
+            <Link
+                className='border text-decoration-none d-inline-block'
+                style={{ padding: '6px 15px' }}
+                to='/adduser'>Add a New Product
+            </Link>
+            <div className="row gy-3">
                 {
-                    products.map(product => <p key={product._id}>{product.name} <button onClick={() => handleDelete(product._id)}>x</button></p>)
+                    products.map(product =>
+                        <div
+                            className='border d-flex flex-row align-items-center container'
+                            key={product._id}
+                        >
+                            <div className="row">
+                                <div className="col-md-3 d-flex flex-column justify-content-center align-items-center">
+                                    <img
+                                        style={{ width: '65%' }}
+                                        src={product?.img} alt=""
+                                    />
+                                    <h5 className='my-2'>{product.name}</h5>
+                                </div>
+                                <div className="col-md-6 ">
+                                    <div className='d-flex justify-content-between mt-4'>
+                                        <h6>Price: {product.price}</h6>
+                                        <h6> Seller: {product.seller}</h6>
+                                    </div>
+                                    <div className='d-flex justify-content-between'>
+                                        <h6>Stock: {product.stock}</h6>
+                                        <h6> Ratings : {product.ratings}</h6>
+                                    </div>
+                                    <div className='mb-3 '>
+                                        <h5>Description</h5>
+                                        <hr style={{ height: '3px', width: '20%', margin: '0' }} />
+                                        {
+                                            product.description
+                                        }
+                                    </div>
+
+                                </div>
+
+                                <div className="col-md-3 d-flex flex-column justify-content-center align-items-center ">
+                                    <button
+                                        className='border-0 bg-transparent'
+                                        onClick={() => handleDelete(product._id)}
+                                    >
+                                        <p style={{ fontSize: '10px', width: '35px', height: '35px', color: 'red' }}>
+                                            <TrashIcon />
+                                        </p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>)
                 }
             </div>
-
-            <Link to='/adduser'>Add User</Link>
         </div>
     );
 };

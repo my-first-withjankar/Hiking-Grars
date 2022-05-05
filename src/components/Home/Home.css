@@ -1,0 +1,19 @@
+.inventory {
+    margin-top: 15px;
+}
+
+.inventory a {
+    text-decoration: none;
+    margin-top: 15px;
+    margin-right: 20px;
+    background-color: #347fb1de;
+    color: white;
+    padding: 10px 15px;
+    display: inline-block;
+
+}
+
+.inventory a:hover {
+    background-color: #60a9dade;
+    color: #fff
+}

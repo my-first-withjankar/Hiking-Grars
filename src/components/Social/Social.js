@@ -2,13 +2,15 @@ import React from 'react';
 import google from '../../img/g-logo.png'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
 
 const Social = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-
+    const navigate = useNavigate()
     if (error) {
         return (
             <div>
@@ -20,11 +22,7 @@ const Social = () => {
         return <p>Loading...</p>;
     }
     if (user) {
-        return (
-            <div>
-                <p>Signed In User: {user.email}</p>
-            </div>
-        );
+        navigate('/')
     };
 
     return (

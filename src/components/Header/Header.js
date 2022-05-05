@@ -19,9 +19,18 @@ const Header = () => {
                 <Navbar.Brand as={Link} to="/"><img height={'50px'} src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="mx-auto">
                         <Nav.Link className='text-dark' as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link className='text-dark' href="#pricing">Pricing</Nav.Link>
+                        <Nav.Link className='text-dark' as={Link} to="#items">Items</Nav.Link>
+
+                        {
+                            user &&
+                            <>
+                                <Nav.Link className='text-dark' as={Link} to="/adduser">Add Item</Nav.Link>
+                                <Nav.Link className='text-dark' as={Link} to="/manage">Manage Items</Nav.Link>
+                                <Nav.Link className='text-dark' as={Link} to="/">My Items</Nav.Link>
+                            </>
+                        }
                         <NavDropdown className='text-dark' title='Pages' id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">About Us</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another </NavDropdown.Item>
@@ -29,8 +38,7 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link className='text-dark' as={Link} to="adduser">Add User</Nav.Link>
-                        <Nav.Link className='text-dark' as={Link} to="/register"> Register</Nav.Link>
+
                         {
                             user
                                 ?

@@ -11,7 +11,7 @@ const Inventory = () => {
             })
     }, [])
     return (
-        <div className='container'>
+        <div id='#items' className='container'>
             <div className="row gy-5">
                 {
                     products.slice(0, 6).map(product => <Product key={product._id} product={product}></Product>)

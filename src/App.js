@@ -11,10 +11,11 @@ import Register from './components/Register/Register';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home />}></Route>
+        <Route path='/home' element={<Home />}></Route>
         <Route path='/adduser' element={<AddUser></AddUser>}></Route>
         <Route path='/inventory' element={<Inventory />}></Route>
         <Route path='/manage' element={<ManageInventory />}></Route>

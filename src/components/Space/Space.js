@@ -6,7 +6,7 @@ import logo from '../../img/moutain-icon-color.jpg'
 const Space = () => {
     return (
         <>
-            <div className='mt-5'>
+            <div className='mt-5 text-center'>
                 <p
                     style={{ fontFamily: ' var(--DTFontTypo_Body)', marginBottom: '0px', fontSize: '22px' }}
                 >Feature
