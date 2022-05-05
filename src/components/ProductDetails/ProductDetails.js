@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowSmRightIcon } from '@heroicons/react/solid'
+import './ProductDetails.css'
 
 const ProductDetails = () => {
     const { productId } = useParams()
@@ -90,18 +91,20 @@ const ProductDetails = () => {
                     <h5
                         style={{ color: 'gray' }}
                     >Description </h5>
-                    <hr style={{ height: '3px', width: '22%', margin: '0' }} />
+                    <hr style={{ height: '3px', width: '22%', margin: '0 0 7px 0' }} />
                     <p>{product?.description}</p>
                     <h6 className='text-center'>Stock : {product?.stock}</h6>
 
                     <div className='d-flex justify-content-between mt-2'>
                         <button
-                            className='btn btn-transparent border'
+                            className='btn btn-transparent border btn-color'
                             onClick={() => handleDelivered()}>Delivered</button>
 
                         <form className='d-inline' onSubmit={stockUpdate} >
                             <input className='w-50 border py-1' ref={stockRef} type="number" name="added" id="" />
-                            <input className='border py-1' type="submit" value="add stock" />
+                            <input
+
+                                className='border btn-transparent btn-color py-1' type="submit" value="add stock" />
                         </form>
                     </div>
                     <div className='inventory container text-end '>

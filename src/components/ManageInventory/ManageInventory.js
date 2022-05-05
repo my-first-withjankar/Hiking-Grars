@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TrashIcon, PlusCircleIcon } from '@heroicons/react/solid'
-
+import './ManageInventory.css'
 
 const ManageInventory = () => {
     const [products, setProducts] = useState([]);

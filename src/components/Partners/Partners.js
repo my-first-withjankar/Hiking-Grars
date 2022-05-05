@@ -13,7 +13,7 @@ import img8 from '../../img/partners/yeti.svg'
 
 const Partners = () => {
     return (
-        <div className='my-5 bg- container'>
+        <div className='my-5 bg-light container'>
             <img className='mx-4 my-5' height={'40px'} src={img1} alt="" />
             <img className='mx-4 my-5' height={'40px'} src={img2} alt="" />
             <img className='mx-4 my-5' height={'40px'} src={img3} alt="" />
