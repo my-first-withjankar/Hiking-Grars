@@ -1,11 +1,11 @@
 import React from 'react';
-import banner1 from '../../img/hiking2.jpg';
+import banner1 from '../../img/img1.png';
 const Banner = () => {
     return (
         <div style=
             {{
                 backgroundImage: `url(${banner1})`,
-                height: '80vh',
+                height: '100vh',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
 

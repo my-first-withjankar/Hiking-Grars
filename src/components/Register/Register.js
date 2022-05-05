@@ -81,7 +81,7 @@ const Register = () => {
                         <input type="password" className="form-control" name='confirmPassword' id="exampleInputPassword1" placeholder="Confirm Password" required />
                     </div>
                     <button type="submit" className="btn btn-primary w-100">Create Account</button>
-                    <p className='my-2'>or</p>
+                    <p className='my-2 text-center'>or</p>
                     <Social></Social>
                     <small className='d-block text-start mt-2 mb-3'>Already in Hikeventures?<Link to='/login'> Log in</Link></small>
                 </form>

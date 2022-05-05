@@ -29,16 +29,21 @@ const AddUser = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleInput}>
-                <input type="text" placeholder='name' name='name' />
-                <textarea type="text" placeholder='description' name='description' />
-                <input type="text" placeholder='seller' name='seller' />
-                <input type="number" placeholder='stock' name='stock' />
-                <input type="text" placeholder='price' name='price' />
-                <input type="text" placeholder='Photo Url' name='img' />
-                <input type="number" placeholder='Ratings' name='ratings' />
-                <input type="submit" value="add" />
+        <div className='mt-5'>
+            <h3
+                style={{ color: 'rgba(5, 51, 83, 0.871)' }}
+                className='text-center'>ADD A ITEM</h3>
+            <form className='w-25 mx-auto ' onSubmit={handleInput}>
+                <input className='d-block rounded border w-100 mb-3 p-1' type="text" placeholder='Product Name' name='name' required />
+                <textarea className='d-block w-100 mb-3 rounded border p-1' type="text" placeholder='Description' name='description' required />
+                <input className='w-50 rounded border  mb-3 p-1' type="text" placeholder='Price' name='price' required />
+                <input className='w-50 rounded border  mb-3 p-1' type="text" placeholder='Seller' name='seller' required />
+                <input className='d-block w-100 mb-3 rounded border p-1' type="text" placeholder='Photo Url' name='img' required />
+                <input className='w-50 mb-3 p-1 rounded border' type="number" placeholder='Stock' name='stock' required />
+                <input className='w-50 mb-3 p-1 rounded border' type="number" placeholder='Ratings' name='ratings' required />
+                <input
+                    style={{ backgroundColor: 'rgba(5, 51, 83, 0.571)' }}
+                    className='d-block text-white py-1 rounded border w-50 mx-auto' type="submit" value="ADD" />
             </form>
         </div>
     );

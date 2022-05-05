@@ -85,7 +85,7 @@ const Login = () => {
                         </button> */}
                     </small>
                     <button type="submit" className="btn btn-primary w-100">Log In</button>
-                    <p className='my-2'>or</p>
+                    <p className='my-2 text-center'>or</p>
                     <Social></Social>
                     <small className='d-block text-start mt-2 mb-3'>Not A Member?<Link to='/register'> Sign Up</Link></small>
                 </form>

@@ -9,3 +9,8 @@
     background-color: #4a82a8a3;
     color: #fff;
 }
+
+.hover:hover {
+    transform: scale(1.1);
+    transition: transform 1s ease-in;
+}

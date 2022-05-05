@@ -6,7 +6,7 @@ const Product = ({ product }) => {
     const { _id, img, name, seller, stock, price, description } = product;
     return (
         <div className="col-md-4 gx-5">
-            <img className='img-fluid' src={img} alt="" />
+            <img className='img-fluid hover' src={img} alt="" />
             <div className="card-body body">
                 <h5 className='pe-5 my-0 text-center' ><small>{seller}</small></h5>
                 <h4 className="card-title fw-bold text-center">{name.slice(0, 20)}</h4>
