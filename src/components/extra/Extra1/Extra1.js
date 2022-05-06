@@ -4,7 +4,7 @@ import image1 from '../../../img/integrations.png'
 
 const Extra1 = () => {
     return (
-        <div className='my-5 py-5'
+        <div className='my-5 py-5 style'
             style={{ backgroundColor: '#f1f8ff' }}
         >
 

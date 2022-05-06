@@ -8,8 +8,10 @@ import Home from './components/Home/Home';
 import Inventory from './components/Inventory/Inventory';
 import Login from './components/Login/Login';
 import ManageInventory from './components/ManageInventory/ManageInventory';
+import NotFound from './components/NotFound/NotFound';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import Register from './components/Register/Register';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -18,14 +20,23 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
-        <Route path='/adduser' element={<AddUser></AddUser>}></Route>
+        <Route path='/adduser' element={
+          <RequireAuth>
+            <AddUser />
+          </RequireAuth>
+        }></Route>
         <Route path='/inventory' element={<Inventory />}></Route>
-        <Route path='/manage' element={<ManageInventory />}></Route>
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManageInventory />
+          </RequireAuth>
+        }></Route>
         <Route path='/productDetails/:productId' element={<ProductDetails />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/login' element={<Login />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
     </div>
   );

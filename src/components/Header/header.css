@@ -1,7 +1,8 @@
 .header {
-    background-color: #1a7dc34f;
+    background-color: #1e80c592;
 }
 
 .header a {
+    color: rgb(246, 244, 229) !important;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

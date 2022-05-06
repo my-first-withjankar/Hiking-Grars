@@ -29,7 +29,7 @@ const AddUser = () => {
     }
 
     return (
-        <div className='mt-5'>
+        <div className='mt-5 style'>
             <h3
                 style={{ color: 'rgba(5, 51, 83, 0.871)' }}
                 className='text-center'>ADD A ITEM</h3>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HomeIcon, PhoneIcon, ClockIcon, MailIcon } from '@heroicons/react/solid'
+import { HomeIcon, PhoneIcon, ClockIcon, MailIcon, ChevronRightIcon } from '@heroicons/react/solid'
 import './Footer.css'
 import instagram from '../../img/instagram.png'
 import twitter from '../../img/twitter.png'
@@ -7,6 +7,7 @@ import facebook from '../../img/facebook (1).png'
 import linkedin from '../../img/linkedin.png'
 import youtube from '../../img/youtube.png'
 import whatsapp from '../../img/whatsapp.png'
+import { Link } from 'react-router-dom';
 
 
 
@@ -19,7 +20,7 @@ const Footer = () => {
                     backgroundColor: '#347fb1de',
 
                 }}
-                className='mt-5 '
+                className='mt-5 style'
             >
                 <div className="row text-white container">
                     <div className='col-md-4 my-5 '>
@@ -45,10 +46,19 @@ const Footer = () => {
                     </div>
 
 
+                    <div className='col-md-4 my-5 text-start'>
+                        <div className='d-flex justify-content-end'>
+                            <div>
+                                <h4 className='mb-3'>Links</h4>
+                                <div>
+                                    <p className='my-1'><ChevronRightIcon className="font-size text-blue-500" />
+                                        <Link
+                                            className='text-decoration-none text-white'
+                                            to='/about'>About Us</Link>
+                                    </p>
+                                </div>
 
-                    <div className='col-md-4 my-5'>
-                        <div className="d-flex justify-content-center">
-                            <h4 className='text-start'>Links</h4>
+                            </div>
                         </div>
                     </div>
 

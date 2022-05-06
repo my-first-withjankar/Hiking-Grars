@@ -3,7 +3,7 @@ import React from 'react';
 const Card = ({ img, children }) => {
     return (
         <div
-            className='card mt-5' >
+            className='card mt-5 style' >
             <img
                 // as={Link}
                 // to='/manage'

@@ -17,7 +17,7 @@ const Home = () => {
             <Partners></Partners>
             <Space></Space>
             <Inventory></Inventory>
-            <div className='inventory container text-end mb-5'>
+            <div className='inventory container text-end mb-5 style'>
                 <Link
                     to='/manage'>Manage Inventory
                     <ArrowSmRightIcon className="font-size text-blue-500 ms-1" />

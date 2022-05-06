@@ -33,7 +33,7 @@ const ManageInventory = () => {
     }
     return (
         <div
-            className='container mt-3'>
+            className='container mt-3 style'>
             <Link
                 className='text-decoration-none d-inline-block mb-3 '
                 to='/adduser'>

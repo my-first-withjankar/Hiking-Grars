@@ -4,7 +4,7 @@ const Blogs = () => {
     return (
         <div
             style={{ fontFamily: '' }}
-            className='container'>
+            className='container style'>
             <div>
                 <h2>Welcome to blog page</h2>
                 <h5>1. Difference between javascript and nodejs ?</h5>

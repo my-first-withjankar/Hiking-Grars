@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import background from '../../img/registerbg.jpg';
 import logo from '../../img/logo.png'
 import Social from '../Social/Social';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import Spinner from '../Spinner/Spinner';
 
 const Register = () => {
     const navigate = useNavigate()
@@ -20,7 +21,7 @@ const Register = () => {
         console.log(user);
     }
     if (loading) {
-        return <p>Loading...</p>;
+        return <Spinner></Spinner>;
     }
 
     if (error) {
@@ -63,10 +64,12 @@ const Register = () => {
                 backgroundRepeat: 'no-repeat',
 
             }}
-            className='d-flex flex-column align-items-center justify-content-center'>
+            className='d-flex flex-column align-items-center justify-content-center style'>
 
             <div className='w-50 mx-auto bg-white'>
-                <img className='mt-3' height={'80px'} src={logo} alt="" />
+                <div className='d-flex justify-content-center'>
+                    <img className='mt-3' height={'80px'} src={logo} alt="" />
+                </div>
                 <form onSubmit={handleSignUp} className='w-50 mx-auto'>
                     <div className="form-group my-3">
                         <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='name' placeholder="Your Name" required />

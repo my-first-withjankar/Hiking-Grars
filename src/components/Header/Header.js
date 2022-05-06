@@ -38,7 +38,7 @@ const Header = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-
+                        <Nav.Link className='text-dark' as={Link} to="register">Register</Nav.Link>
                         {
                             user
                                 ?

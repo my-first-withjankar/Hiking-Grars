@@ -72,7 +72,7 @@ const ProductDetails = () => {
         event.target.reset()
     }
     return (
-        <div className='container h-100'>
+        <div className='container h-100 style'>
             <div className="row">
                 <div className='col-md-6  my-auto mx-auto'>
                     <img src={product?.img} alt="" />
