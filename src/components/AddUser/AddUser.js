@@ -15,7 +15,7 @@ const AddUser = () => {
 
         console.log(name, price);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://secret-depths-91808.herokuapp.com/products', {
             method: 'POST',
             body: JSON.stringify({
                 name, price, description, seller, ratings, img, stock

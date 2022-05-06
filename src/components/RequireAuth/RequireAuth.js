@@ -12,7 +12,7 @@ const RequireAuth = ({ children }) => {
         return <Spinner></Spinner>
     }
 
-    if (!user) {
+    if (user.emailVerified && !user) {
         return <Navigate to="/login" state={{ from: location }} replace />;
     }
 

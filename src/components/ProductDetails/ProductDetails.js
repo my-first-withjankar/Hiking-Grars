@@ -8,7 +8,7 @@ const ProductDetails = () => {
     const stockRef = useRef('')
     const [product, setProduct] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/products/${productId}`;
+        const url = `https://secret-depths-91808.herokuapp.com/products/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(result => setProduct(result))
@@ -25,7 +25,7 @@ const ProductDetails = () => {
             ratings: product.ratings,
             img: product.img
         };
-        const url = `http://localhost:5000/products/${productId}`;
+        const url = `https://secret-depths-91808.herokuapp.com/products/${productId}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -56,7 +56,7 @@ const ProductDetails = () => {
         };
 
         // send data
-        const url = `http://localhost:5000/products/${productId}`;
+        const url = `https://secret-depths-91808.herokuapp.com/products/${productId}`;
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -20,31 +20,31 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto">
-                        <Nav.Link className='text-dark' as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link className='text-dark' as={Link} to='/blogs'>Blogs</Nav.Link>
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
 
                         {
                             user &&
                             <>
-                                <Nav.Link className='text-dark' as={Link} to="/adduser">Add Item</Nav.Link>
-                                <Nav.Link className='text-dark' as={Link} to="/manage">Manage Items</Nav.Link>
-                                <Nav.Link className='text-dark' as={Link} to="/">My Items</Nav.Link>
+                                <Nav.Link as={Link} to="/adduser">Add Item</Nav.Link>
+                                <Nav.Link as={Link} to="/manage">Manage Items</Nav.Link>
+                                <Nav.Link as={Link} to="/">My Items</Nav.Link>
                             </>
                         }
-                        <NavDropdown className='text-dark' title='Pages' id="collasible-nav-dropdown">
-                            <NavDropdown.Item as={Link} to='/about' >About Us</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        <NavDropdown title='Pages' id="collasible-nav-dropdown">
+                            <NavDropdown.Item className='bg-dark' as={Link} to='/about' >About Us</NavDropdown.Item>
+                            <NavDropdown.Item className='bg-dark' href="#action/3.2">Another </NavDropdown.Item>
+                            <NavDropdown.Item className='bg-dark' href="#action/3.3">Something</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <Nav.Link className='text-dark' as={Link} to="register">Register</Nav.Link>
+                        <Nav.Link as={Link} to="register">Register</Nav.Link>
                         {
                             user
                                 ?
-                                <Nav.Link onClick={logOut} className='text-dark' as={Link} to="/"> Sign Out</Nav.Link>
+                                <Nav.Link onClick={logOut} as={Link} to="/"> Sign Out</Nav.Link>
                                 :
-                                <Nav.Link className='text-dark' as={Link} to="login"> Login</Nav.Link>
+                                <Nav.Link as={Link} to="login"> Login</Nav.Link>
 
                         }
                     </Nav>

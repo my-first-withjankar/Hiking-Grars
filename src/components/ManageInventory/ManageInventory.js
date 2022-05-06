@@ -6,7 +6,7 @@ import './ManageInventory.css'
 const ManageInventory = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://secret-depths-91808.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -17,7 +17,7 @@ const ManageInventory = () => {
         const proceed = window.confirm('are you sure you want to delete');
         if (proceed) {
             console.log(id);
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://secret-depths-91808.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
