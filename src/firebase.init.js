@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCsdFeI5X094dHeFC5CgmhcBIazGlVHOUw",
-    authDomain: "hiking-gears-518d1.firebaseapp.com",
-    projectId: "hiking-gears-518d1",
-    storageBucket: "hiking-gears-518d1.appspot.com",
-    messagingSenderId: "408552754455",
-    appId: "1:408552754455:web:ce28906127b9951d057b52"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
