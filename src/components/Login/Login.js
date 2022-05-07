@@ -1,5 +1,4 @@
-import { async } from '@firebase/util';
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -10,9 +9,9 @@ import Spinner from '../Spinner/Spinner';
 
 const Login = () => {
     const navigate = useNavigate()
+    const emailRef = useRef('')
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
-    const [mail, setMail] = useState('')
     const [
         signInWithEmailAndPassword,
         user,
@@ -20,7 +19,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    // const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     if (error) {
         return <p>{error.message}</p>
@@ -37,23 +36,23 @@ const Login = () => {
         event.preventDefault()
 
         const email = event.target.email.value;
-        setMail(email)
         const password = event.target.password.value;
 
         signInWithEmailAndPassword(email, password)
 
     };
 
-    // const handleResetPassword = async (event) => {
-    //     setEmail(event.target.email.value)
 
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
 
-    // }
-
-    // const handleResetPassword = async () => {
-    //     await sendPasswordResetEmail(mail)
-    //     alert('Send A mail to your Gmail')
-    // }
+            alert("Sent email");
+        } else {
+            alert("please enter your email");
+        }
+    };
 
 
     return (
@@ -74,23 +73,22 @@ const Login = () => {
                 </div>
                 <form onSubmit={handleSignIn} className='w-50 mx-auto'>
                     <div className="form-group my-4">
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='email' placeholder="Enter email" required />
+                        <input type="email" ref={emailRef} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='email' placeholder="Enter email" required />
                     </div>
                     <div className="form-group mb-1">
                         <input type="password" className="form-control" name='password' id="exampleInputPassword1" placeholder="Password" required />
                     </div>
-                    <small className='mb-2 d-block text-start'>
-                        Forgot Password?
-                        {/* <button
-                            onClick={async () => {
-                                await sendPasswordResetEmail(mail);
-                                alert('Sent email');
-                            }}
+
+                    <p>
+                        Forget Password?
+                        <button
+                            to="/register"
+                            className="btn btn-link text-primary pe-auto text-decoration-none"
+                            onClick={resetPassword}
                         >
-                            Reset password
-                        </button> */}
-                        {/* <p className='text-center pr-5'>Forget Password?<button onClick={handleResetPassword} className='btn btn-link text-decoration-none' to='/register'>Reset Here</button> </p> */}
-                    </small>
+                            Reset Password
+                        </button>
+                    </p>
                     <button type="submit" className="btn btn-primary w-100">Log In</button>
                     <p className='my-2 text-center'>or</p>
                     <Social></Social>
