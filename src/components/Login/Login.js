@@ -20,9 +20,9 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-
+    let errors;
     if (error) {
-        return <p>{error.message}</p>
+        errors = <p className='text-danger'>{error.message}</p>
     }
     if (loading) {
         return <Spinner></Spinner>;
@@ -47,7 +47,6 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-
             alert("Sent email");
         } else {
             alert("please enter your email");
@@ -78,7 +77,7 @@ const Login = () => {
                     <div className="form-group mb-1">
                         <input type="password" className="form-control" name='password' id="exampleInputPassword1" placeholder="Password" required />
                     </div>
-
+                    {errors}
                     <p>
                         Forget Password?
                         <button

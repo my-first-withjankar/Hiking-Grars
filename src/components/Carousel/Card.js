@@ -8,7 +8,7 @@ const Card = ({ img, children }) => {
                 // as={Link}
                 // to='/manage'
                 className='img-fluid' src={img} alt="" />
-            <div class="carousel-caption d-none d-md-block">
+            <div className="carousel-caption d-none d-md-block">
                 <h3>{children}</h3>
             </div>
         </div >

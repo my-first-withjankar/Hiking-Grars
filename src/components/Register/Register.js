@@ -4,7 +4,7 @@ import background from '../../img/registerbg.jpg';
 import logo from '../../img/logo.png'
 import Social from '../Social/Social';
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import Spinner from '../Spinner/Spinner';
 
 const Register = () => {
@@ -14,10 +14,11 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
 
     if (user) {
-        navigate('/')
         console.log(user);
     }
     if (loading) {
@@ -25,14 +26,10 @@ const Register = () => {
     }
 
     if (error) {
-        return (
-            <div>
-                <p>Error: {error.message}</p>
-            </div>
-        );
+        <p>Error: {error.message}</p>
     }
 
-    const handleSignUp = (event) => {
+    const handleSignUp = async (event) => {
         event.preventDefault()
 
         const name = event.target.name.value;
@@ -43,7 +40,9 @@ const Register = () => {
         console.log(name, email, password, confirmPassword);
 
         if (password === confirmPassword) {
-            createUserWithEmailAndPassword(email, password)
+            await createUserWithEmailAndPassword(email, password)
+            await updateProfile({ displayName: name });
+            navigate('/')
         }
         else {
             return alert('password did not matched')

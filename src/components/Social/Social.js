@@ -14,12 +14,11 @@ const Social = () => {
     const navigate = useNavigate()
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
+
+    let errors;
+
     if (error) {
-        return (
-            <div>
-                <p>Error: {error.message}</p>
-            </div>
-        );
+        errors = <p className='text-danger'>Error: {error.message}</p>
     }
     if (loading) {
         return <Spinner></Spinner>
@@ -30,6 +29,7 @@ const Social = () => {
 
     return (
         <div>
+            {errors}
             <button
                 onClick={() => signInWithGoogle()}
                 type="submit" className="bg-white d-flex align-items-center justify-content-around btn btn-white border  w-100 my-0">
