@@ -34,7 +34,11 @@ const MyItems = () => {
             const email = user?.email;
             const url = `https://secret-depths-91808.herokuapp.com/product?email=${email}`;
             if (email) {
-                const { data } = await axios.get(url);
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                });
                 setInventories(data)
             }
         }

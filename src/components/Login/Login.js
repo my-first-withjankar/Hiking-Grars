@@ -7,6 +7,7 @@ import logo from '../../img/logo.png'
 import Social from '../Social/Social';
 import Spinner from '../Spinner/Spinner';
 import toast, { Toaster } from 'react-hot-toast';
+import axios from 'axios';
 const Login = () => {
     const navigate = useNavigate()
     const emailRef = useRef('')
@@ -28,18 +29,21 @@ const Login = () => {
         return <Spinner></Spinner>;
     }
     if (user) {
-        alert('Signed In User')
-        navigate(from, { replace: true });
+        toast('Signed In User')
+
     }
 
-    const handleSignIn = (event) => {
+    const handleSignIn = async (event) => {
         event.preventDefault()
 
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        signInWithEmailAndPassword(email, password)
-
+        await signInWithEmailAndPassword(email, password)
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        console.log(data);
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     };
 
 
