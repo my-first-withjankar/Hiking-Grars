@@ -7,7 +7,7 @@ import logo from '../../img/logo.png'
 import Social from '../Social/Social';
 import Spinner from '../Spinner/Spinner';
 import toast, { Toaster } from 'react-hot-toast';
-import axios from 'axios';
+// import axios from 'axios';
 const Login = () => {
     const navigate = useNavigate()
     const emailRef = useRef('')
@@ -20,7 +20,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
     let errors;
     if (error) {
         errors = <p className='text-danger'>{error.message}</p>
@@ -30,7 +30,7 @@ const Login = () => {
     }
     if (user) {
         toast('Signed In User')
-
+        navigate(from, { replace: true });
     }
 
     const handleSignIn = async (event) => {
@@ -40,10 +40,10 @@ const Login = () => {
         const password = event.target.password.value;
 
         await signInWithEmailAndPassword(email, password)
-        const { data } = await axios.post('http://localhost:5000/login', { email });
-        console.log(data);
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
+        // const { data } = await axios.post('https://secret-depths-91808.herokuapp.com/login',{ email });
+        // console.log(data);
+        // localStorage.setItem('accessToken', data.accessToken);
+        // navigate(from, { replace: true });
     };
 
 

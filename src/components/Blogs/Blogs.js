@@ -12,9 +12,10 @@ const Blogs = () => {
             </div>
             <div>
                 <h5>2.When should you use nodejs and when should you use mongodb ?</h5>
-                <p>We can use node.js for constructing an API application with both relational and non-relational databases. It is suitable because of the Single thread with event loop.Always being processed asynchronously by internal threads without interrupting the main thread.Due to the event-driven and asynchronous nature, node.js is good at building real-time applications</p>
+                <p>Node.js Use: Node. js is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.So, if you want to write some kind of stand-alone program or server in Javascript, then you can use nodejs for it.
+                </p>
                 <p>
-                    MOngodb is very fast and efficient so I should use it when I have key value pair to store(json data) . one of the best advantage with MongoDB is I can store a collection inside another collection . it support more user at a time and also useful if I have large number of fields.
+                    MongoDB Use: MongoDB is a technology that's revolutionizing database usage.If your application needs the ability to persistently store data in a way that you can efficiently query or update it later, then you would typically use some form of database.
                 </p>
             </div>
             <div>
@@ -25,7 +26,7 @@ const Blogs = () => {
             <div>
                 <h5>4.What is the purpose of jwt and how does it work?</h5>
                 <p>JWT is an open standard used to share security information between two parties — a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued.It has one characteristic in particular that makes it a good tool for sending a user’s identity to a backend service. We can trust the integrity of a JWT because JWTs are signed, making them tamper-proof.</p>
-                <p>JWT is a string made up of three parts, separated by dots (.), and serialized using base64. In the most common serialization format, compact serialization, the JWT looks something like this: xxxxx.yyyyy.zzzzz.you will get two JSON strings:The header and the payload.header contains the type of token JWT in this case and the signing algorithm. Payload contains the claims. This is displayed as a JSON string, usually containing no more than a dozen fields to keep the JWT compact.</p>
+                <p>JWT is a string made up of three parts, separated by dots (.), and serialized using base64. In the most common serialization format, compact serialization.you will get two JSON strings:The header and the payload.header contains the type of token JWT in this case and the signing algorithm. Payload contains the claims. This is displayed as a JSON string, usually containing no more than a dozen fields to keep the JWT compact</p>
             </div>
         </div>
     );
