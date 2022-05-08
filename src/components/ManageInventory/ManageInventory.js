@@ -17,7 +17,7 @@ const ManageInventory = () => {
         const proceed = window.confirm('are you sure you want to delete');
         if (proceed) {
             console.log(id);
-            const url = `https://secret-depths-91808.herokuapp.com/product/${id}`;
+            const url = `https://secret-depths-91808.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

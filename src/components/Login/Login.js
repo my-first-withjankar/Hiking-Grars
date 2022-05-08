@@ -6,7 +6,7 @@ import background from '../../img/loginbg.jpg';
 import logo from '../../img/logo.png'
 import Social from '../Social/Social';
 import Spinner from '../Spinner/Spinner';
-
+import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
     const navigate = useNavigate()
     const emailRef = useRef('')
@@ -47,11 +47,12 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            alert("Sent email");
-        } else {
-            alert("please enter your email");
+            toast('Sent email');
         }
-    };
+        else {
+            toast('please enter your email address');
+        }
+    }
 
 
     return (
@@ -78,21 +79,13 @@ const Login = () => {
                         <input type="password" className="form-control" name='password' id="exampleInputPassword1" placeholder="Password" required />
                     </div>
                     {errors}
-                    <p>
-                        Forget Password?
-                        <button
-                            to="/register"
-                            className="btn btn-link text-primary pe-auto text-decoration-none"
-                            onClick={resetPassword}
-                        >
-                            Reset Password
-                        </button>
-                    </p>
+                    <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
                     <button type="submit" className="btn btn-primary w-100">Log In</button>
                     <p className='my-2 text-center'>or</p>
                     <Social></Social>
                     <small className='d-block text-start mt-2 mb-3'>Not A Member?<Link to='/register'> Sign Up</Link></small>
                 </form>
+                <Toaster />
             </div>
         </div >
     );

@@ -16,7 +16,7 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
+    let errors;
 
     if (user) {
         console.log(user);
@@ -26,7 +26,7 @@ const Register = () => {
     }
 
     if (error) {
-        <p>Error: {error.message}</p>
+        errors = <p>Error: {error.message}</p>
     }
 
     const handleSignUp = async (event) => {
@@ -82,6 +82,7 @@ const Register = () => {
                     <div className="form-group mb-3">
                         <input type="password" className="form-control" name='confirmPassword' id="exampleInputPassword1" placeholder="Confirm Password" required />
                     </div>
+                    {errors}
                     <button type="submit" className="btn btn-primary w-100">Create Account</button>
                     <p className='my-2 text-center'>or</p>
                     <Social></Social>
